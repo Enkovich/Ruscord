@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+.container .leftPanel{
+    border-right: 1px solid rgb(170, 170, 170);
+    min-height: 100vh;
+}
+.leftPanel .leftPanelBtn{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.leftPanel .leftPanelBtn:hover{
+    background-color: rgb(201, 201, 201);
+}
+.panelChats{
+    text-align: center;
+    margin: 10px 0;
+    margin-top: 30px;
+    font-size: 14px;
+}
+.leftPanelBtn.active{
+    background-color: rgb(168, 168, 168);
+}
+/*Страница с друзьями*/
+.FriendsPanelInputs{
+    display:flex;
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+.FriendsPanelInputs div{
+    cursor:pointer;
+    margin: 10px 20px;
+}
+.FriendsItem{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 10px auto;
+    background-color: rgb(240, 240, 240);
+}
+.FriendsItem:hover{
+    background-color: rgb(201, 201, 201);
+}
+.friendsInput{
+    padding: 5px 7px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.friendsInput:hover{
+    background-color: rgb(206, 206, 206);
+}
+.friendsInput.action{
+    background-color: rgb(168, 168, 168);
+}
+.addFriendsInput{
+    padding: 5px 7px;
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: rgb(91, 163, 82);
+    color: white;
+}
+.addFriendsInput:hover{
+    background-color: rgb(53, 192, 35);
+}
+.addFriendsInput.action{
+    background-color: rgb(42, 218, 19);
+}
+.titlePageFriends{
+    padding: 5px;
+    padding-right: 25px;
+    border-right: 1px solid lightgray;
+    cursor: default;
+}
+.friendsEmpty{
+    text-align: center;
+    margin-top: 20px;
+}
+/*Чаты*/
+.ChatBtn{
+    width: calc(100% - 20px);
+    text-align: left;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 40px auto;
+    border-radius: 5px;
+    align-items: center;
+}
+.ChatBtn div{
+    text-align: left;
+}
+.ChatBtn div:nth-child(1){
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    height: 100%;
+}
+.ChatBtn div:nth-child(2){
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 15px;
+}
+.ChatBtn:hover{
+    background-color: rgb(201, 201, 201);
+}
+.ChatBtn{
+    transition: 0.3s;
+}
+.ChatBtn:hover{
+    background-color: rgb(216, 216, 216);
+}
+.ChatBtn.activeChat{
+    background-color: rgb(168, 168, 168);
+}
+.avatarChat{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/*Страница с профилем*/
+.profileBlock{
+    display: grid;
+    grid-template-columns: 120px auto;
+    align-items: center;
+}
+.profileBlock div:nth-child(1){
+    padding: 10px;
+}
+.profileImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+/* Чаты */
+.messageItem{
+    transition: 0.3s;
+}
+.messageItem:hover{
+    background-color: rgb(216, 216, 216);
+}
+.chatBlock{
+    height: 100vh;
+}
+.chatMessageBlock{
+    height: calc(100vh - 38px);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.blockForm{
+    padding-left: 8px;
+    padding-top: 8px;
+    height: 30px;
+}
+.blockFormInput{
+    width: calc(100% - 104px);
+}
