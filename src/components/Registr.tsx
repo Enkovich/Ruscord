@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { userAPI } from '../services/userService';
 
@@ -24,7 +24,13 @@ const Registr = () => {
         registerUser({dataUser:{name: inpNameRef.current?.value, password: inpPassConfRef.current?.value}})
     }
 
-    if(status?.statusReg===true){
+    useEffect(()=>{
+        if(status?.statusReg===true){
+            navigate('/')
+        }
+    }, [navigate, status?.statusReg])
+
+    const backForAuth = () => {
         navigate('/')
     }
 
@@ -35,7 +41,8 @@ const Registr = () => {
                 <input type="text" ref={inpNameRef} placeholder='Введите имя пользователя'/><br />
                 <input type="password" ref={inpPassRef} placeholder='Введите пароль' /><br />
                 <input type="password" ref={inpPassConfRef} placeholder='Повторите пароль' /><br />
-                <button onClick={clickHandler}>Зарегестрироваться</button>
+                <button onClick={clickHandler}>Зарегестрироваться</button><br />
+                <button type='button' onClick={backForAuth}>Вернуться к авторизации</button>
             </form>
             
         </div>
