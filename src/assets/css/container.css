@@ -100,6 +100,8 @@ body{
     grid-template-columns: 40px auto;
     border-radius: 5px;
     align-items: center;
+    background-color: rgb(243, 243, 243);
+    font-size: 14px;
 }
 .ChatBtn div{
     text-align: left;
@@ -169,4 +171,46 @@ body{
 }
 .blockFormInput{
     width: calc(100% - 104px);
+}
+/*Форма регистрации и авторизации*/
+
+.blockFormAuthContainer{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+.blockFormAuth{
+    padding: 40px;
+    padding-top: 10px;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(179, 179, 179);
+}
+.formAuth input{
+    border: none;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+    margin-bottom: 5px;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+.blockError{
+    color: red;
+    font-size: 14px;
+}
+.blockRedirect{
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 35px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: rgb(238, 238, 238);
+}
+.blockRedirect:hover{
+    background-color: lightgray;
 }

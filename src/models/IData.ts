@@ -7,6 +7,7 @@ export interface IData{
     statusAuth?: boolean | null
 }
 export interface IError{
+    status?: boolean
     type?: number
     description?: string
 }

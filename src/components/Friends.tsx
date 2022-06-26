@@ -4,7 +4,6 @@ import FriendsItem from './elements/FriendsItem';
 import { userAPI } from '../services/userService';
 import { chatAPI } from '../services/chatService';
 import { IChats } from '../models/IChats';
-import Chats from './Chats';
 
 interface FriendsProps{
     userData: IUser
@@ -17,8 +16,8 @@ const Friends:FC<FriendsProps> = ({userData, openChat}) => {
     const pending = userData?.notifications?.pendings
     const friends = userData?.friends
     const [inputUserName, setInputUserName] = useState<string>('')
-    const [confirmFriend, {}] = userAPI.useConfirmFriendMutation()
-    const [deleteFriend, {}] = userAPI.useDeleteFriendMutation()
+    const [confirmFriend] = userAPI.useConfirmFriendMutation()
+    const [deleteFriend] = userAPI.useDeleteFriendMutation()
 
     const [addFriends, {data: status}] = userAPI.useAddFriendMutation()
     const [createChat, {data: statusChat}] = chatAPI.useCreateChatMutation()
