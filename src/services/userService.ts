@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { IData, IError } from "../models/IData";
+import { IData } from "../models/IData";
 import { INotification } from "../models/INotification";
 import { IUser,ConfirmFriend } from "../models/IUser";
 

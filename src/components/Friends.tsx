@@ -4,7 +4,6 @@ import FriendsItem from './elements/FriendsItem';
 import { userAPI } from '../services/userService';
 import { chatAPI } from '../services/chatService';
 import { IChats } from '../models/IChats';
-import Chats from './Chats';
 
 interface FriendsProps{
     userData: IUser
