@@ -26,12 +26,21 @@ const Auth = () => {
     }    
 
     return (
-        (!status)?(<div><form>
-            <input type="text" ref={inputRef} placeholder='Имя пользователя' /><br />
-            <input type="password" ref={input2Ref} placeholder='Пароль' /><br />
-            <button onClick={clickHandler}>Войти</button>
-            <div onClick={clickRedirect}>Зарегестрироваться</div>
-        </form></div>) : ((userData?.dataUser)?<Messanger exit={exitAccount} data={userData.dataUser}></Messanger>:<div>Ошибка загрузки</div>)
+        (!status)?(
+        <div className='blockFormAuthContainer'>
+            <div className='blockFormAuth'>
+                <h1>Авторизация</h1>
+                <form className='formAuth'>
+                <input type="text" ref={inputRef} placeholder='Имя пользователя' /><br />
+                    <input type="password" ref={input2Ref} placeholder='Пароль' /><br />
+                    {(userData?.statusAuth === false)?<div className='blockError'>Неправильный логин или пароль</div>:''}
+                    <button onClick={clickHandler}>Войти</button>
+                    <div onClick={clickRedirect} className='blockRedirect'>Зарегестрироваться</div>
+                    
+                </form>
+            </div>
+        </div>
+        ) : ((userData?.dataUser)?<Messanger exit={exitAccount} data={userData.dataUser}></Messanger>:<div>Ошибка загрузки</div>)
     );
 };
 
